@@ -1,10 +1,11 @@
 class PlayHandController < ApplicationController
   
-  def initialize
-    @random_move = ["rock", "paper", "scissors"]
-  end
+  # def initialize
+  #   @random_move = ["rock", "paper", "scissors"]
+  # end
   
   def hand_selection
+    @random_move = ["rock", "paper", "scissors"]
     @computer_move = @random_move.sample
     @player_move = params["choice"]
     if @player_move == "rock"
